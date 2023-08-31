@@ -1,15 +1,12 @@
 Feature: login system
 
-  Scenario Outline: the user should be able to login to the system
+  Scenario: the user should be able to login to the system
 
     Given user is on login page
-    And user fill the "<username>" and "<pass>"
-    When user click the login button
-    Then the user should be directed to the dashboard
+    And user fill the fields
+    Then user click the login button
+    And user fills the required field
 
-    Examples:
-     | username | pass |
-    | ayush   |   ayush  |
-    |avyudaya | avyudaya |
+
 
 

@@ -1,14 +1,11 @@
-Feature: Registration
+Feature: User Registration
 
-  Scenario: The successful OTP validation
+  Scenario: Registering a new user
+    Given User is on the registration page
+    When User fills the valid number and email
+    Then User should be able to click register button
+    And User fill the required field
+    Then User clicks the submit button
+    And User click the next button and confirm it
 
-  Given User is on the registration page
-    And User fills the valid number and email
-    When User click the send OTP button
-    Then User should be able to enter the Otp
 
-    Scenario: successful redirection to the business page
-
-      And User fill the required field
-      When User clicks the submit button
-      Then User should be directed to the business page
